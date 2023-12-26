@@ -4,7 +4,7 @@
     .head {
         font-family: fantasy;
         font-size: 2rem;
--        font-weight: bolder;
+        font-weight: bolder;
     }
 
     .crd {
@@ -20,18 +20,18 @@
 
 }
 
-    @media (min-width: 992px) {
-        .head {
-            font-family: fantasy;
-            font-size: 2rem;
-            letter-spacing: 1rem;
-            font-weight: bolder;
+@media (min-width: 992px) {
+    .head {
+        font-family: fantasy;
+        font-size: 2rem;
+        letter-spacing: 1rem;
+        font-weight: bolder;
 
 
-        }
-
-        .crd {
-            width: 18rem;
-            padding: 2px;
-        }
     }
+
+    .crd {
+        width: 18rem;
+        padding: 2px;
+    }
+}
