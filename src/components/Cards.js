@@ -10,7 +10,7 @@ function Cards({ onAddClick }) {
   useEffect(() => {
     const fetchMongoData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/foods");
+        const response = await fetch("https://foodcounter-backend.onrender.com/api/foods");
         if (!response.ok) {
           throw new Error("Failed to fetch data from the server");
         }
