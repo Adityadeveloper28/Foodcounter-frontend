@@ -10,9 +10,7 @@ function Cards({ onAddClick }) {
   useEffect(() => {
     const fetchMongoData = async () => {
       try {
-        const response = await fetch(
-          "https://foodcounter-backend.onrender.com/api/foods/"
-        );
+        const response = await fetch("http://localhost:5000/api/foods");
         if (!response.ok) {
           throw new Error("Failed to fetch data from the server");
         }
@@ -53,24 +51,25 @@ function Cards({ onAddClick }) {
   }
 
   return (
-    <div className="m-auto">
-      <div className="row m-auto p-2">
-        <h1 className="col">Food Cards</h1>
-        <div className="col-4 d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search Food"
-            aria-label="Search"
-            value={searchQuery}
-            onChange={handleSearch}
-          />
-        </div>
+    <div className=" container m-auto mb-3">
+      <div className="row m-auto d-flex p-1 justify-content-center p-0">
+        <div className="col-6"><input
+          class="form-control me-2 p-2"
+          type="search"
+          placeholder="Search Food"
+          aria-label="Search"
+          value={searchQuery}
+          onChange={handleSearch}
+        /></div>
+        
       </div>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div
+        className="container-fluid p-0"
+        style={{ display: "flex", flexWrap: "wrap" }}
+      >
         {filteredFoods.map((food) => (
           <div
-            className="card m-auto border-2 border-dark"
+            className="card m-auto mt-2 border-2 border-dark"
             style={{ width: "18rem" }}
             key={food._id}
           >

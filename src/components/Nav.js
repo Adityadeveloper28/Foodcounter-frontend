@@ -1,11 +1,11 @@
 import React from "react";
-
+import "../App.css";
 function Nav() {
   return (
-    <div>
-      <nav className="navbar bg-body-tertiary">
-        <div className="container">
-          <a className="navbar-brand " href="#" style={{fontFamily:'fantasy',fontSize:'3rem',letterSpacing:'11px',fontWeight:'bolder'}}>
+    <div className="container-fluid  p-0 m-0">
+      <nav className="navbar bg-secondary rounded-2">
+        <div className="container-fluid">
+          <a className="navbar-brand head" href="#">
             FOODCOUNTER
           </a>
         </div>

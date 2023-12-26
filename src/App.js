@@ -22,8 +22,8 @@ function App() {
     setAddedDetails((prevDetails) => [...prevDetails, food]);
   };
   return (
-    <div className="container-fluid">
-      <div>
+    <div className="container-fluid p-0">
+      <div className="container-fluid m-0 p-0">
         <Nav />
       </div>
       <div className="d-grid gap-2 col-6 mx-auto p-3">
@@ -77,7 +77,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="container-fluid p-0">
         <Cards onAddClick={handleAddClick} />
       </div>
     </div>
